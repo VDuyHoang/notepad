@@ -1,0 +1,26 @@
+#If the RMS level dB is -inf, then that channel is silent.
+#Example 1:
+#[Parsed_astats_0 @ 0000000003c3aec0] RMS level dB: -inf
+#[Parsed_astats_0 @ 0000000003c3aec0] RMS peak dB: -3076.526556
+#[Parsed_astats_0 @ 0000000003c3aec0] RMS trough dB: -inf
+#[Parsed_astats_0 @ 0000000003c3aec0] Flat factor: -inf
+#Example 2
+#[Parsed_astats_0 @ 0x5606be07a6c0] Channel: 5
+#[Parsed_astats_0 @ 0x5606be07a6c0] DC offset: -0.000026
+#[Parsed_astats_0 @ 0x5606be07a6c0] Min level: -0.518484
+#[Parsed_astats_0 @ 0x5606be07a6c0] Max level: 0.897560
+#[Parsed_astats_0 @ 0x5606be07a6c0] Min difference: 0.000000
+#[Parsed_astats_0 @ 0x5606be07a6c0] Max difference: 0.897382
+#[Parsed_astats_0 @ 0x5606be07a6c0] Mean difference: 0.001076
+#[Parsed_astats_0 @ 0x5606be07a6c0] RMS difference: 0.003009
+#[Parsed_astats_0 @ 0x5606be07a6c0] Peak level dB: -0.938734
+#[Parsed_astats_0 @ 0x5606be07a6c0] RMS level dB: -37.171149
+#[Parsed_astats_0 @ 0x5606be07a6c0] RMS peak dB: -12.912443
+#[Parsed_astats_0 @ 0x5606be07a6c0] RMS trough dB: -168.497213
+#[Parsed_astats_0 @ 0x5606be07a6c0] Crest factor: 64.806823
+#[Parsed_astats_0 @ 0x5606be07a6c0] Flat factor: 0.000000
+#[Parsed_astats_0 @ 0x5606be07a6c0] Peak count: 2
+#[Parsed_astats_0 @ 0x5606be07a6c0] Bit depth: 32/32
+#[Parsed_astats_0 @ 0x5606be07a6c0] Dynamic range: 273.535204
+
+ffmpeg -i "file.mkv" -map 0:a:0 -af astats -f null -
